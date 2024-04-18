@@ -1,0 +1,47 @@
+<div class="card-header">
+  <div class="row">
+    <form class="needs-validation" novalidate [formGroup]="consultaForm">
+      <div class="row mt-2">
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-6">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-3">
+            <label for="selDate" class="control-label" style="font-size: large"
+              ><b>Busqueda por Fecha</b></label
+            >
+          </div>
+          <input
+            id="selDate"
+            class="form-control"
+            formControlName="fechaBusqueda"
+            type="date"
+            value="date"
+          />
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 col-xl-6">
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <label class="form-label">
+              <br />
+            </label>
+          </div>
+
+          <button
+            label="Buscar Evento"
+            pButton
+            [raised]="true"
+            [rounded]="true"
+            class="p-button-secondary mt-2 mb-3 me-3 form-control-sm col-5 col-sm-12 col-md-5 col-lg-1"
+            (click)="onSubmit()"
+          ></button>
+
+          <button
+            label="Nuevo Evento"
+            pButton
+            [raised]="true"
+            [rounded]="true"
+            class="p-button-success mt-2 mb-3 form-control-sm col-5 col-sm-12 col-md-5 col-lg-1"
+            (click)="onSubmit()"
+          ></button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
